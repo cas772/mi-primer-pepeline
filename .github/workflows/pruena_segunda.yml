@@ -9,7 +9,7 @@ jobs:
         with:
           node-version: 24
           cache: 'npm'
-          cache-dependency-path: subdir/package-lock.json
+          package-manager-cache: false
       - run: npm ci
       - run: npm test
 
