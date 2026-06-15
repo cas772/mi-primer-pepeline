@@ -1,1 +1,9 @@
-run: echo "Hola este es mi primer pepeline profesional"
+name: onlySaludar
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: saludar
+        run: echo "Hola este es mi primer pepeline profesional"
