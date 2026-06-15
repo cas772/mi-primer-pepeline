@@ -1,0 +1,31 @@
+{
+  "info": {
+    "_postman_id": "4fabedf8-38a6-4bf6-92d9-80a30bc76eac",
+    "name": "Pruebas de API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55866094"
+  },
+  "item": [
+    {
+      "name": "First Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/todos/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "todos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
