@@ -1,0 +1,29 @@
+name: install_node_newman
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Repository
+        uses: actions/checkout@v4
+        
+      - name: Install pnpm # Install pnpm before using the action
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Cache/Install NodeJS Dependencies
+        uses: luisfuentech/gha-cache-deps@v1.2.3
+        with:
+          node-manager: pnpm
+          lock-file: pnpm-lock.yaml
+
+      - name: Install newman
+        run: npm install -g newman
+
+      - name: Ejecutar newman
+        run: newman run Pruebas de API.postman_collection.json
+        
+        
+          
+    
